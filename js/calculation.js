@@ -24,4 +24,12 @@ $(document).ready(function() {
                        "This should produce " + targetCooked.toFixed(2) + "g of cooked rice.");
 
   });
+  $("#fill").click(function() {
+    $("#eaters").val("9");
+    $("#aveEaten").val("200");
+    $("#leftover").val("0");
+    $("#pot").val("330");
+    $("#ratio").val("1.5");
+    $("#cupWeight").val("140");
+  });
 });
