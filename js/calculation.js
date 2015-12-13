@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#calculate").click(function() {
+    $("#results-header").show();
     var eaters = parseFloat($("#eaters").val());
     var cupWeight = parseFloat($("#cupWeight").val());
     var leftover = parseFloat($("#leftover").val());
@@ -20,7 +21,7 @@ $(document).ready(function() {
     var netWeight = targetUncooked * (1 + ratio) + pot;
 
     $("#results").html("You should cook " + targetUncooked.toFixed(2) + "g of rice (about " + cups.toFixed(2) + " cups).<br>" +
-                       "Wash the rice then fill the pot with water until the total weight is " + netWeight.toFixed(2) + "g give or take " + (cups * 20).toFixed(2) + "g.<br><br>" +
+                       "Wash the rice then fill the pot with water until the total weight is " + netWeight.toFixed(0) + "g give or take " + (cups * 2).toFixed() * 10 + "g.<br><br>" +
                        "This should produce " + targetCooked.toFixed(2) + "g of cooked rice.");
 
   });
