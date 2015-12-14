@@ -20,9 +20,9 @@ $(document).ready(function() {
 
     var netWeight = targetUncooked * (1 + ratio) + pot;
 
-    $("#results").html("You should cook " + targetUncooked.toFixed(2) + "g of rice (about " + cups.toFixed(2) + " cups).<br>" +
+    $("#results").html("You should cook " + targetUncooked.toFixed() + "g of rice (about " + cups.toFixed(2) + " cups).<br>" +
                        "Wash the rice then fill the pot with water until the total weight is " + netWeight.toFixed(0) + "g give or take " + (cups * 2).toFixed() * 10 + "g.<br><br>" +
-                       "This should produce " + targetCooked.toFixed(2) + "g of cooked rice.");
+                       "This should produce " + targetCooked.toFixed() + "g of cooked rice.");
 
   });
   $("#fill").click(function() {
